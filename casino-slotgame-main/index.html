@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slot Machine Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Game container with a background image -->
+  <div class="game-container">
+    <h1>FRUIT KING</h1>
+
+    <!-- Balance and Deposit Section -->
+    <div class="balance-deposit">
+      <h3>Balance: $<span id="balance">0.00</span></h3>
+      <input type="number" id="depositAmount" placeholder="Deposit Amount" min="1" />
+      <button id="depositButton">Deposit</button>
+    </div>
+
+    <!-- Slot Machine Reels -->
+    <div class="slot-machine">
+      <div class="reel" id="reel1">🍒</div>
+      <div class="reel" id="reel2">🍋</div>
+      <div class="reel" id="reel3">🍊</div>
+    </div>
+
+    <!-- Bet and Spin Section -->
+    <div class="controls">
+      <input type="number" id="betAmount" placeholder="Bet Amount" min="1" />
+      <button id="spinButton" disabled>Spin</button>
+    </div>
+
+    <!-- Result Display -->
+    <div id="result"></div>
+
+    <!-- Mute Button -->
+    <button id="muteButton">Mute</button>
+
+  </div>
+  
+
+  <!-- Audio elements -->
+  <audio id="winSound" src="win.mp3"></audio>
+  <audio id="loseSound" src="lose.mp3"></audio>
+  <audio id="backgroundAudio" loop>
+    <source src="background.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
